@@ -1,0 +1,19 @@
+/**
+ * Write a function that returns true if the given array includes the word "friend", false if not.
+ * 
+ * Example
+ * 
+ * Input: ["enemy", "friend", "enemy"]
+ * 
+ * Output: true
+ */
+
+function hasFriend(input: string[]) {
+    if (input.findIndex((element) => (element === 'friend')) > 0) {
+        return true
+    } else {
+        return false
+    }
+}
+
+export { hasFriend };
