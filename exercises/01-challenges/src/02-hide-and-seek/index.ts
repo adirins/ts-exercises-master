@@ -7,7 +7,7 @@ function hideAndSeek(crowd: string) {
     return crowd
         .split(``)
         .filter(char => char.match(/^[a-z]/))
-        .join(``­)
-}
+        .join(``)
+};
 
 export { hideAndSeek };

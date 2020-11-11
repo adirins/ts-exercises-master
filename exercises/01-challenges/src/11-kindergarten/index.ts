@@ -7,13 +7,7 @@ import { check } from "prettier";
 import { isTemplateExpression } from "typescript";
 
 function kindergarten(sentence: string, letter: string) {
-    return sentence
-        .split(` `)
-        .map(word => word)
-        .forEach(item => {
-            if (item.charAt(0).includes(letter)) {
-                item.split(``).reverse().join(``)
-            }
-        })
+    return sentence.split(` `).map(word => word.charAt(0) === letter ? word.split(``).reverse().join(``) : word).join(` `)
 }
+
 export { kindergarten }

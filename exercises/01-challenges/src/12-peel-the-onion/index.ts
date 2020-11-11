@@ -21,8 +21,9 @@
 
 function peelTheOnion(onion: (string | number)[][]) {
   return onion
-    .slice(1, onion.length - 1)
-    .slice([1])
+  .slice(1, onion.length - 1)
+  .map(item => item.slice(1, item.length - 1));
 }
+
 
 export { peelTheOnion };

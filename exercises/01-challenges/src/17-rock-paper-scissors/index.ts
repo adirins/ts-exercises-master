@@ -8,8 +8,28 @@
  * S stands for Scissors
  */
 
-function rockPaperScissors(games: string[][]) { 
-    
+function rockPaperScissors(games: string[][]) {
+    let abigail = 0;
+    let benson = 0;
+    games.forEach(item => {
+        if (item[0] === item[1]) {
+            return
+        } else {
+            if (item[0] === `R` && item[1] === `S` || item[0] === `P` && item[1] === `R` || item[0] === `S` && item[1] === `P`) {
+                abigail++
+            } else {
+                benson++
+            }
+        }
+    })
+    if (abigail === benson) {
+        return `Tie!`
+    } else {
+        if (abigail > benson) {
+            return `Abigail`
+        }
+    }
+    return `Benson`
 }
 
 export { rockPaperScissors };

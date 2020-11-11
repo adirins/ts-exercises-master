@@ -5,10 +5,12 @@
  */
 
 function objectPro(input: any) {
-   let key = Object.keys(input).sort((a,b) =>a-b)
-   let val = key.map()
-   return ()
- }
+  // return [Object.keys(input), Object.values(input)];
+
+  let key = Object.keys(input);
+  let value = Object.values(input);
+  return [key, value]
+}
 
 export { objectPro };
 

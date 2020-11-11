@@ -6,7 +6,15 @@
  */
 
 function matchMaker(women: string[], men: string[]) {
-    
- }
+    if (women.length !== men.length) {
+        return (`Cupid is on vacation`)
+    } else {
+        let pairs = []
+        for (let i = 0; i <= women.length-1; i++) {
+            pairs.push([women[i], men[i]])            
+        }
+        return (pairs)
+    }
+}
 
 export { matchMaker };
